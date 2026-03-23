@@ -3,144 +3,644 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Radio Player</title>
+    <title>SimpleRadio – Privacy Policy</title>
     <style>
+        :root {
+            --primary: #4F46E5;
+            --primary-light: #EEF2FF;
+            --text: #1F2937;
+            --text-secondary: #6B7280;
+            --border: #E5E7EB;
+            --bg: #FFFFFF;
+            --bg-section: #F9FAFB;
+            --radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            color: #333;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                         'Helvetica Neue', Arial, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
         }
-        h1, h2 {
-            color: #111;
+
+        /* ── Header ─────────────────────────────────── */
+        .header {
+            background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+            color: white;
+            padding: 48px 24px 40px;
+            text-align: center;
         }
-        h1 {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
+
+        .header .app-icon {
+            width: 72px;
+            height: 72px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 18px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            margin-bottom: 16px;
+            backdrop-filter: blur(10px);
         }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            opacity: 0.85;
+        }
+
+        .header .updated {
+            display: inline-block;
+            margin-top: 14px;
+            padding: 4px 14px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 20px;
+            font-size: 13px;
+            backdrop-filter: blur(6px);
+        }
+
+        /* ── Container ──────────────────────────────── */
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 32px 20px 64px;
+        }
+
+        /* ── TOC ────────────────────────────────────── */
+        .toc {
+            background: var(--bg-section);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px 28px;
+            margin-bottom: 36px;
+        }
+
+        .toc h2 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+
+        .toc ol {
+            padding-left: 20px;
+        }
+
+        .toc li {
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+
+        .toc a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .toc a:hover {
+            color: var(--primary);
+        }
+
+        /* ── Sections ───────────────────────────────── */
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary-light);
+            scroll-margin-top: 24px;
+        }
+
+        .section h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 18px;
+            margin-bottom: 8px;
+        }
+
+        .section p {
+            margin-bottom: 12px;
+            color: var(--text);
+            font-size: 15px;
+        }
+
+        .section ul,
+        .section ol {
+            margin-bottom: 14px;
+            padding-left: 22px;
+        }
+
+        .section li {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .section strong {
+            color: var(--text);
+        }
+
+        /* ── Info Card ──────────────────────────────── */
+        .info-card {
+            background: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            padding: 16px 20px;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+
+        .info-card.warning {
+            background: #FEF3C7;
+            border-left-color: #F59E0B;
+        }
+
+        /* ── Table ──────────────────────────────────── */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 16px 0;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
+            font-size: 14px;
         }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
+
+        thead {
+            background: var(--bg-section);
         }
+
         th {
-            background-color: #f5f5f5;
+            text-align: left;
+            padding: 12px 16px;
+            font-weight: 600;
+            color: var(--text);
+            border-bottom: 2px solid var(--border);
         }
-        a {
-            color: #0366d6;
+
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        td a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        td a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── Footer ─────────────────────────────────── */
+        .footer {
+            text-align: center;
+            padding: 24px 20px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border);
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* ── Contact Card ───────────────────────────── */
+        .contact-card {
+            background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+            color: white;
+            border-radius: var(--radius);
+            padding: 28px;
+            text-align: center;
+            margin-top: 24px;
+        }
+
+        .contact-card h2 {
+            color: white;
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 8px;
+        }
+
+        .contact-card p {
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 16px;
+        }
+
+        .contact-card a {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 10px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: background 0.2s;
+            backdrop-filter: blur(6px);
+        }
+
+        .contact-card a:hover {
+            background: rgba(255,255,255,0.35);
+        }
+
+        /* ── Dark Mode ──────────────────────────────── */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #818CF8;
+                --primary-light: #1E1B4B;
+                --text: #E5E7EB;
+                --text-secondary: #9CA3AF;
+                --border: #374151;
+                --bg: #111827;
+                --bg-section: #1F2937;
+            }
+
+            .header {
+                background: linear-gradient(135deg, #312E81 0%, #4C1D95 100%);
+            }
+
+            thead {
+                background: #1F2937;
+            }
+
+            .info-card.warning {
+                background: #422006;
+                border-left-color: #D97706;
+                color: #FDE68A;
+            }
+        }
+
+        /* ── Responsive ─────────────────────────────── */
+        @media (max-width: 600px) {
+            .header {
+                padding: 36px 16px 32px;
+            }
+
+            .header h1 {
+                font-size: 22px;
+            }
+
+            .container {
+                padding: 24px 16px 48px;
+            }
+
+            .section h2 {
+                font-size: 18px;
+            }
+
+            .contact-card {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
 
-<h1>Privacy Policy for Radio Player</h1>
+<!-- ── Header ──────────────────────────────────────────────────────────── -->
+<header class="header">
+    <div class="app-icon">📻</div>
+    <h1>SimpleRadio</h1>
+    <p class="subtitle">Privacy Policy</p>
+    <span class="updated">Last updated: March 23, 2026</span>
+</header>
 
-<p><strong>Last updated:</strong> March 2026<br>
-<strong>Developer:</strong> Guoqing Chu</p>
+<!-- ── Main Content ────────────────────────────────────────────────────── -->
+<main class="container">
 
-<h2>1. Introduction</h2>
-<p>Radio Player ("we", "our", "the app") is a free internet radio streaming application. This Privacy Policy explains what information we collect, how we use it, and your choices regarding your data.</p>
+    <!-- TOC -->
+    <nav class="toc">
+        <h2>📑 Table of Contents</h2>
+        <ol>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#information">Information We Collect</a></li>
+            <li><a href="#usage">How We Use Your Information</a></li>
+            <li><a href="#third-party">Third-Party Services</a></li>
+            <li><a href="#advertising">Advertising and Consent</a></li>
+            <li><a href="#foreground">Foreground Service</a></li>
+            <li><a href="#iap">In-App Purchases</a></li>
+            <li><a href="#retention">Data Retention and Deletion</a></li>
+            <li><a href="#children">Children's Privacy</a></li>
+            <li><a href="#security">Data Security</a></li>
+            <li><a href="#rights">Your Rights</a></li>
+            <li><a href="#changes">Changes to This Policy</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ol>
+    </nav>
 
-<h2>2. Information We Collect</h2>
+    <!-- 1. Introduction -->
+    <div class="section" id="introduction">
+        <h2>1. Introduction</h2>
+        <p>
+            SimpleRadio ("we", "our", "the app") is a free internet radio streaming application
+            developed by <strong>Guoqing Chu</strong>. This Privacy Policy explains what information
+            we collect, how we use it, and your choices regarding your data.
+        </p>
+        <p>
+            By using SimpleRadio, you agree to the collection and use of information as described
+            in this policy.
+        </p>
+    </div>
 
-<h3>2.1 Information Collected Automatically</h3>
-<ul>
-    <li><strong>Device information</strong>: device model, OS version, app version, crash logs, and session analytics — used solely to improve app stability and user experience.</li>
-    <li><strong>Advertising identifier (Google Advertising ID)</strong>: used by Google AdMob to serve ads.</li>
-</ul>
+    <!-- 2. Information We Collect -->
+    <div class="section" id="information">
+        <h2>2. Information We Collect</h2>
 
-<h3>2.2 Information You Provide</h3>
-<ul>
-    <li><strong>Favorites and playback history</strong>: stored locally on your device only. We do not upload or sync this data to any server.</li>
-</ul>
+        <h3>2.1 Information Collected Automatically</h3>
+        <ul>
+            <li>
+                <strong>Device information</strong>: device model, OS version, app version — used
+                solely to improve app stability and user experience.
+            </li>
+            <li>
+                <strong>Crash logs and analytics</strong>: collected via <strong>Firebase
+                Crashlytics</strong> and <strong>Firebase Analytics</strong> to diagnose bugs,
+                monitor app performance, and understand usage patterns. This data is anonymized
+                and does not personally identify you.
+            </li>
+            <li>
+                <strong>Advertising identifier</strong> (Google Advertising ID): used by Google
+                AdMob to serve personalized or non-personalized ads based on your consent
+                preferences.
+            </li>
+        </ul>
 
-<h3>2.3 Location Data</h3>
-<ul>
-    <li><strong>Approximate location</strong> (country-level, optional): used to suggest local radio stations. This data is not stored on our servers.</li>
-</ul>
+        <h3>2.2 Information You Provide</h3>
+        <ul>
+            <li>
+                <strong>Favorites and playback history</strong>: stored locally on your device
+                only. We do <strong>not</strong> upload or sync this data to any server.
+            </li>
+        </ul>
 
-<h2>3. How We Use Your Information</h2>
-<ul>
-    <li>Provide and maintain the radio streaming service</li>
-    <li>Display advertisements (free version only)</li>
-    <li>Process and restore in-app purchases via Google Play</li>
-    <li>Improve app performance and fix bugs</li>
-</ul>
+        <h3>2.3 Location Data</h3>
+        <ul>
+            <li>
+                <strong>Approximate location</strong> (country-level only, derived from device
+                locale or SIM information): used to suggest local radio stations. This data is
+                processed on-device and is <strong>not</strong> transmitted to or stored on our
+                servers.
+            </li>
+        </ul>
 
-<p><strong>We do NOT sell, rent, or trade your personal data to third parties.</strong></p>
+        <div class="info-card">
+            💡 We do <strong>not</strong> collect your name, email address, phone number, or any
+            other personally identifiable information.
+        </div>
+    </div>
 
-<h2>4. Third-Party Services</h2>
+    <!-- 3. How We Use Your Information -->
+    <div class="section" id="usage">
+        <h2>3. How We Use Your Information</h2>
+        <ul>
+            <li>Provide and maintain the radio streaming service</li>
+            <li>Enable background audio playback via a foreground service</li>
+            <li>Display advertisements (free version only)</li>
+            <li>Process and restore in-app purchases via Google Play</li>
+            <li>Collect anonymous analytics to improve app quality (Firebase Analytics)</li>
+            <li>Monitor and fix crashes (Firebase Crashlytics)</li>
+        </ul>
 
-<p>The app uses the following third-party services:</p>
+        <div class="info-card warning">
+            ⚠️ We do <strong>NOT</strong> sell, rent, or trade your personal data to third parties.
+        </div>
+    </div>
 
-<table>
-    <tr>
-        <th>Service</th>
-        <th>Purpose</th>
-        <th>Privacy Policy</th>
-    </tr>
-    <tr>
-        <td>Google AdMob</td>
-        <td>Advertising</td>
-        <td><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></td>
-    </tr>
-    <tr>
-        <td>Google Play Billing</td>
-        <td>In-app purchases</td>
-        <td><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></td>
-    </tr>
-    <tr>
-        <td>Radio Browser API</td>
-        <td>Radio station data</td>
-        <td><a href="https://www.radio-browser.info/privacy" target="_blank">Radio Browser Privacy</a></td>
-    </tr>
-</table>
+    <!-- 4. Third-Party Services -->
+    <div class="section" id="third-party">
+        <h2>4. Third-Party Services</h2>
+        <p>
+            The app integrates the following third-party services, each governed by its own
+            privacy policy:
+        </p>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Purpose</th>
+                        <th>Privacy Policy</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Google AdMob</strong></td>
+                        <td>Advertising</td>
+                        <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google Play Billing</strong></td>
+                        <td>In-app purchases</td>
+                        <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Firebase Analytics</strong></td>
+                        <td>Usage analytics</td>
+                        <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Firebase Crashlytics</strong></td>
+                        <td>Crash reporting</td>
+                        <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Radio Browser API</strong></td>
+                        <td>Radio station data</td>
+                        <td><a href="https://www.radio-browser.info/" target="_blank" rel="noopener">Radio Browser</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
-<h2>5. In-App Purchases</h2>
+    <!-- 5. Advertising and Consent -->
+    <div class="section" id="advertising">
+        <h2>5. Advertising and Consent</h2>
+        <ul>
+            <li>This app displays ads via <strong>Google AdMob</strong> in the free version.</li>
+            <li>
+                For users in the <strong>European Economic Area (EEA)</strong> and
+                <strong>United Kingdom (UK)</strong>, a consent dialog is presented at first
+                launch in compliance with the <strong>EU General Data Protection Regulation
+                (GDPR)</strong> and <strong>ePrivacy Directive</strong>. You may choose to accept
+                or decline personalized advertising.
+            </li>
+            <li>
+                You can change your ad preferences at any time through the app settings or by
+                resetting your Advertising ID in your device settings.
+            </li>
+            <li><strong>Premium subscribers</strong> do not see any advertisements.</li>
+        </ul>
+    </div>
 
-<p>This app uses Google Play Billing to process in-app purchases and subscriptions.</p>
+    <!-- 6. Foreground Service -->
+    <div class="section" id="foreground">
+        <h2>6. Foreground Service</h2>
+        <p>
+            This app uses an Android <strong>foreground service</strong> with type
+            <code>mediaPlayback</code> to maintain continuous audio playback of live radio
+            streams while the app is in the background or when the screen is off.
+        </p>
+        <ul>
+            <li>
+                A visible notification with playback controls is displayed at all times
+                during playback.
+            </li>
+            <li>You can stop playback and dismiss the notification at any time.</li>
+            <li>
+                The foreground service is <strong>only</strong> active during audio streaming
+                and performs no other background work.
+            </li>
+        </ul>
+    </div>
 
-<p>All payments are securely handled by Google. We do not collect, store, or process any payment information such as credit card numbers.</p>
+    <!-- 7. In-App Purchases -->
+    <div class="section" id="iap">
+        <h2>7. In-App Purchases</h2>
+        <p>
+            This app uses <strong>Google Play Billing</strong> to process in-app purchases and
+            subscriptions. All payments are securely handled by Google. We do <strong>not</strong>
+            collect, store, or process any payment information such as credit card numbers.
+        </p>
+        <p>
+            For details, refer to
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
+                Google's Privacy Policy</a>.
+        </p>
+    </div>
 
-<p>For more details, please refer to Google's Privacy Policy:</p>
+    <!-- 8. Data Retention and Deletion -->
+    <div class="section" id="retention">
+        <h2>8. Data Retention and Deletion</h2>
+        <ul>
+            <li>
+                All user data (favorites, playback history) is stored
+                <strong>locally</strong> on your device.
+            </li>
+            <li>
+                <strong>Firebase Analytics</strong> data is retained for
+                <strong>14 months</strong> per Google's default retention policy, after which
+                it is automatically deleted.
+            </li>
+            <li>
+                <strong>Firebase Crashlytics</strong> crash logs are retained for
+                <strong>90 days</strong>.
+            </li>
+            <li>No account registration is required.</li>
+            <li>
+                You can delete all local data by clearing app data or uninstalling the app.
+            </li>
+        </ul>
+    </div>
 
-<p>
-<a href="https://policies.google.com/privacy" target="_blank">
-https://policies.google.com/privacy
-</a>
-</p>
+    <!-- 9. Children's Privacy -->
+    <div class="section" id="children">
+        <h2>9. Children's Privacy</h2>
+        <p>
+            This app is <strong>not</strong> intended for children under 13 (or under 16 in the
+            EEA). We do not knowingly collect personal data from children. If you believe a child
+            has provided us with personal information, please contact us so we can promptly
+            delete it.
+        </p>
+    </div>
 
-<h2>6. Data Retention and Deletion</h2>
-<ul>
-    <li>All user data (favorites, playback history) is stored locally on your device.</li>
-    <li>No account registration is required.</li>
-    <li>You can delete data by clearing app data or uninstalling the app.</li>
-</ul>
+    <!-- 10. Data Security -->
+    <div class="section" id="security">
+        <h2>10. Data Security</h2>
+        <p>
+            We take reasonable measures to protect your information, including using HTTPS for
+            network communications where supported. However, no method of electronic transmission
+            or storage is 100% secure, and we cannot guarantee absolute security.
+        </p>
+    </div>
 
-<h2>7. Children's Privacy</h2>
-<p>This app is not intended for children under 13. We do not knowingly collect personal data from children.</p>
+    <!-- 11. Your Rights -->
+    <div class="section" id="rights">
+        <h2>11. Your Rights</h2>
+        <p>Depending on your location, you may have the following rights:</p>
+        <ul>
+            <li>
+                <strong>Access</strong>: request a copy of the data we hold about you
+            </li>
+            <li>
+                <strong>Deletion</strong>: request deletion of your data
+            </li>
+            <li>
+                <strong>Opt-out of personalized ads</strong>: via your device settings
+                (Settings → Google → Ads) or through the in-app consent dialog
+            </li>
+            <li>
+                <strong>Withdraw consent</strong>: change your ad preferences at any time
+            </li>
+            <li>
+                <strong>Data portability</strong>: your favorites are stored locally and can
+                be accessed directly on your device
+            </li>
+            <li>
+                <strong>Lodge a complaint</strong>: with your local data protection authority
+                (for EEA/UK residents)
+            </li>
+        </ul>
+        <p>To exercise any of these rights, contact us at the email below.</p>
+    </div>
 
-<h2>8. Data Security</h2>
-<p>We take reasonable measures to protect your information, but no method of transmission is 100% secure.</p>
+    <!-- 12. Changes -->
+    <div class="section" id="changes">
+        <h2>12. Changes to This Policy</h2>
+        <p>
+            We may update this Privacy Policy from time to time. Any changes will be posted on
+            this page with an updated "Last updated" date. Continued use of the app after changes
+            constitutes acceptance of the revised policy.
+        </p>
+    </div>
 
-<h2>9. Your Rights</h2>
-<ul>
-    <li>Opt out of personalized ads via your device settings</li>
-    <li>Clear local data anytime</li>
-    <li>Contact us to request assistance</li>
-</ul>
+    <!-- 13. Contact -->
+    <div class="section" id="contact">
+        <div class="contact-card">
+            <h2>13. Contact Us</h2>
+            <p>
+                If you have any questions about this Privacy Policy, please contact us:
+            </p>
+            <a href="mailto:chuguoqing1001@gmail.com">
+                ✉️ chuguoqing1001@gmail.com
+            </a>
+        </div>
+    </div>
 
-<h2>10. Changes to This Policy</h2>
-<p>We may update this policy. Updates will be reflected on this page.</p>
+</main>
 
-<h2>11. Contact Us</h2>
-<p>Email: <strong>chuguoqing1001@gmail.com</strong></p>
+<!-- ── Footer ──────────────────────────────────────────────────────────── -->
+<footer class="footer">
+    <p>© 2026 Guoqing Chu. All rights reserved.</p>
+    <p>SimpleRadio – Internet Radio Streaming App</p>
+</footer>
 
 </body>
 </html>
