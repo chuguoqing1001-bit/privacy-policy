@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RadioPlayer – Privacy Policy</title>
+    <title>RadioPlayer - Privacy Policy</title>
     <style>
         :root {
             --primary: #4F46E5;
@@ -31,7 +31,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* ── Header ─────────────────────────────────── */
         .header {
             background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
             color: white;
@@ -73,14 +72,12 @@
             backdrop-filter: blur(6px);
         }
 
-        /* ── Container ──────────────────────────────── */
         .container {
             max-width: 780px;
             margin: 0 auto;
             padding: 32px 20px 64px;
         }
 
-        /* ── TOC ────────────────────────────────────── */
         .toc {
             background: var(--bg-section);
             border: 1px solid var(--border);
@@ -115,7 +112,6 @@
             color: var(--primary);
         }
 
-        /* ── Sections ───────────────────────────────── */
         .section {
             margin-bottom: 32px;
         }
@@ -158,7 +154,6 @@
             color: var(--text);
         }
 
-        /* ── Info Card ──────────────────────────────── */
         .info-card {
             background: var(--primary-light);
             border-left: 4px solid var(--primary);
@@ -173,7 +168,6 @@
             border-left-color: #F59E0B;
         }
 
-        /* ── Table ──────────────────────────────────── */
         .table-wrapper {
             overflow-x: auto;
             margin: 16px 0;
@@ -218,7 +212,6 @@
             text-decoration: underline;
         }
 
-        /* ── Footer ─────────────────────────────────── */
         .footer {
             text-align: center;
             padding: 24px 20px;
@@ -232,7 +225,6 @@
             text-decoration: none;
         }
 
-        /* ── Contact Card ───────────────────────────── */
         .contact-card {
             background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
             color: white;
@@ -271,7 +263,14 @@
             background: rgba(255,255,255,0.35);
         }
 
-        /* ── Dark Mode ──────────────────────────────── */
+        code {
+            background: var(--bg-section);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 1px 5px;
+            font-size: 0.95em;
+        }
+
         @media (prefers-color-scheme: dark) {
             :root {
                 --primary: #818CF8;
@@ -298,7 +297,6 @@
             }
         }
 
-        /* ── Responsive ─────────────────────────────── */
         @media (max-width: 600px) {
             .header {
                 padding: 36px 16px 32px;
@@ -324,18 +322,15 @@
 </head>
 <body>
 
-<!-- ── Header ──────────────────────────────────────────────────────────── -->
 <header class="header">
     <div class="app-icon">📻</div>
     <h1>RadioPlayer</h1>
     <p class="subtitle">Privacy Policy</p>
-    <span class="updated">Last updated: March 23, 2026</span>
+    <span class="updated">Last updated: May 30, 2026</span>
 </header>
 
-<!-- ── Main Content ────────────────────────────────────────────────────── -->
 <main class="container">
 
-    <!-- TOC -->
     <nav class="toc">
         <h2>📑 Table of Contents</h2>
         <ol>
@@ -344,6 +339,7 @@
             <li><a href="#usage">How We Use Your Information</a></li>
             <li><a href="#third-party">Third-Party Services</a></li>
             <li><a href="#advertising">Advertising and Consent</a></li>
+            <li><a href="#app-events">App Events and Advertising Measurement</a></li>
             <li><a href="#foreground">Foreground Service</a></li>
             <li><a href="#iap">In-App Purchases</a></li>
             <li><a href="#retention">Data Retention and Deletion</a></li>
@@ -355,7 +351,6 @@
         </ol>
     </nav>
 
-    <!-- 1. Introduction -->
     <div class="section" id="introduction">
         <h2>1. Introduction</h2>
         <p>
@@ -369,34 +364,57 @@
         </p>
     </div>
 
-    <!-- 2. Information We Collect -->
     <div class="section" id="information">
         <h2>2. Information We Collect</h2>
 
         <h3>2.1 Information Collected Automatically</h3>
         <ul>
             <li>
-                <strong>Device information</strong>: device model, OS version, app version — used
-                solely to improve app stability and user experience.
+                <strong>Device information</strong>: device model, OS version, app version, and
+                related technical information used to improve app stability and user experience.
             </li>
             <li>
-                <strong>Crash logs and analytics</strong>: collected via <strong>Firebase
-                Crashlytics</strong> and <strong>Firebase Analytics</strong> to diagnose bugs,
-                monitor app performance, and understand usage patterns. This data is anonymized
-                and does not personally identify you.
+                <strong>Crash logs and diagnostics</strong>: collected via <strong>Firebase
+                Crashlytics</strong> and related Firebase services to diagnose bugs, monitor app
+                performance, and improve reliability.
+            </li>
+            <li>
+                <strong>Analytics data</strong>: collected via <strong>Firebase Analytics</strong>
+                to understand usage patterns, such as screen views, app interactions, playback
+                actions, feature usage, and purchase-related events.
+            </li>
+            <li>
+                <strong>In-app search and interaction data</strong>: search terms, station
+                interactions, favorites actions, playback-related events, and similar app activity
+                may be collected for analytics and product improvement. We do not use this
+                information to identify you by name.
             </li>
             <li>
                 <strong>Advertising identifier</strong> (Google Advertising ID): used by Google
-                AdMob to serve personalized or non-personalized ads based on your consent
-                preferences.
+                AdMob and advertising measurement services to serve ads, measure ad performance,
+                and support personalized or non-personalized ads based on your consent preferences
+                and device settings.
+            </li>
+            <li>
+                <strong>App events and advertising measurement data</strong>: we may collect app
+                activation events, onboarding completion, basic app interactions, purchase-related
+                events, device/app information, and device identifiers such as the Advertising ID
+                where available. This information is used to measure app performance, improve app
+                quality, and understand the effectiveness of advertising campaigns, including
+                campaigns run through Meta.
             </li>
         </ul>
 
         <h3>2.2 Information You Provide</h3>
         <ul>
             <li>
-                <strong>Favorites and playback history</strong>: stored locally on your device
-                only. We do <strong>not</strong> upload or sync this data to any server.
+                <strong>Favorites and playback history</strong>: stored locally on your device for
+                app functionality. We do <strong>not</strong> upload your full favorites list or
+                playback history to our own servers.
+            </li>
+            <li>
+                <strong>Support emails</strong>: if you contact us by email, we will receive your
+                email address and any information you choose to include in your message.
             </li>
         </ul>
 
@@ -404,36 +422,39 @@
         <ul>
             <li>
                 <strong>Approximate location</strong> (country-level only, derived from device
-                locale or SIM information): used to suggest local radio stations. This data is
-                processed on-device and is <strong>not</strong> transmitted to or stored on our
-                servers.
+                locale, SIM information, or your selected country): used to suggest local radio
+                stations and improve app analytics. We do <strong>not</strong> collect precise GPS
+                location.
             </li>
         </ul>
 
         <div class="info-card">
-            💡 We do <strong>not</strong> collect your name, email address, phone number, or any
-            other personally identifiable information.
+            We do <strong>not</strong> require account registration and do not collect your name,
+            phone number, or email address during normal app use. If you contact us by email, we
+            will receive your email address and any information you choose to include in your
+            message.
         </div>
     </div>
 
-    <!-- 3. How We Use Your Information -->
     <div class="section" id="usage">
         <h2>3. How We Use Your Information</h2>
         <ul>
             <li>Provide and maintain the radio streaming service</li>
+            <li>Suggest radio stations based on country-level preferences</li>
             <li>Enable background audio playback via a foreground service</li>
-            <li>Display advertisements (free version only)</li>
+            <li>Display advertisements in the free version</li>
+            <li>Measure app installs, app activation, and advertising campaign performance</li>
             <li>Process and restore in-app purchases via Google Play</li>
-            <li>Collect anonymous analytics to improve app quality (Firebase Analytics)</li>
-            <li>Monitor and fix crashes (Firebase Crashlytics)</li>
+            <li>Collect analytics to improve app quality and user experience</li>
+            <li>Monitor and fix crashes, errors, and performance issues</li>
+            <li>Prevent fraud, abuse, and unauthorized access to paid features</li>
         </ul>
 
         <div class="info-card warning">
-            ⚠️ We do <strong>NOT</strong> sell, rent, or trade your personal data to third parties.
+            We do <strong>NOT</strong> sell, rent, or trade your personal data to third parties.
         </div>
     </div>
 
-    <!-- 4. Third-Party Services -->
     <div class="section" id="third-party">
         <h2>4. Third-Party Services</h2>
         <p>
@@ -452,22 +473,27 @@
                 <tbody>
                     <tr>
                         <td><strong>Google AdMob</strong></td>
-                        <td>Advertising</td>
+                        <td>Advertising and ad performance measurement</td>
                         <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></td>
                     </tr>
                     <tr>
+                        <td><strong>Meta App Events</strong></td>
+                        <td>App install attribution, app activation, advertising measurement, and campaign performance analytics</td>
+                        <td><a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta Privacy Policy</a></td>
+                    </tr>
+                    <tr>
                         <td><strong>Google Play Billing</strong></td>
-                        <td>In-app purchases</td>
+                        <td>In-app purchases, subscriptions, purchase restoration, and fraud prevention</td>
                         <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></td>
                     </tr>
                     <tr>
                         <td><strong>Firebase Analytics</strong></td>
-                        <td>Usage analytics</td>
+                        <td>Usage analytics, app events, product improvement, and campaign measurement</td>
                         <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy</a></td>
                     </tr>
                     <tr>
                         <td><strong>Firebase Crashlytics</strong></td>
-                        <td>Crash reporting</td>
+                        <td>Crash reporting, diagnostics, and app stability monitoring</td>
                         <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy</a></td>
                     </tr>
                     <tr>
@@ -480,7 +506,6 @@
         </div>
     </div>
 
-    <!-- 5. Advertising and Consent -->
     <div class="section" id="advertising">
         <h2>5. Advertising and Consent</h2>
         <ul>
@@ -500,34 +525,59 @@
         </ul>
     </div>
 
-    <!-- 6. Foreground Service -->
+    <div class="section" id="app-events">
+        <h2>6. App Events and Advertising Measurement</h2>
+        <p>
+            RadioPlayer uses the <strong>Meta App Events SDK</strong> to measure app installs,
+            app activation, and advertising campaign performance. This helps us understand whether
+            advertising campaigns are effective and improve the app experience.
+        </p>
+        <p>
+            The Meta App Events SDK may collect and process information such as app activation
+            events, basic app interactions, device and app information, and device identifiers such
+            as the Advertising ID where available. We may also send limited app events such as
+            onboarding completion and country-level selection for campaign measurement.
+        </p>
+        <p>
+            We do <strong>not</strong> send your name, email address, phone number, favorites list,
+            playback history, or radio search history to Meta.
+        </p>
+        <p>
+            Meta processes this information according to its own privacy policy:
+            <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">
+                Meta Privacy Policy</a>.
+        </p>
+    </div>
+
     <div class="section" id="foreground">
-        <h2>6. Foreground Service</h2>
+        <h2>7. Foreground Service</h2>
         <p>
             This app uses an Android <strong>foreground service</strong> with type
-            <code>mediaPlayback</code> to maintain continuous audio playback of live radio
-            streams while the app is in the background or when the screen is off.
+            <code>mediaPlayback</code> to maintain continuous audio playback of live radio streams
+            while the app is in the background or when the screen is off.
         </p>
         <ul>
-            <li>
-                A visible notification with playback controls is displayed at all times
-                during playback.
-            </li>
+            <li>A visible notification with playback controls is displayed during playback.</li>
             <li>You can stop playback and dismiss the notification at any time.</li>
             <li>
-                The foreground service is <strong>only</strong> active during audio streaming
-                and performs no other background work.
+                The foreground service is <strong>only</strong> active during audio streaming and
+                performs no other background work.
             </li>
         </ul>
     </div>
 
-    <!-- 7. In-App Purchases -->
     <div class="section" id="iap">
-        <h2>7. In-App Purchases</h2>
+        <h2>8. In-App Purchases</h2>
         <p>
             This app uses <strong>Google Play Billing</strong> to process in-app purchases and
             subscriptions. All payments are securely handled by Google. We do <strong>not</strong>
             collect, store, or process any payment information such as credit card numbers.
+        </p>
+        <p>
+            We may receive purchase status, product identifiers, transaction identifiers, purchase
+            tokens, price, and currency information from Google Play Billing to unlock Premium
+            features, restore purchases, prevent fraud, and measure purchase performance. We do
+            <strong>not</strong> receive or store your payment card information.
         </p>
         <p>
             For details, refer to
@@ -536,44 +586,45 @@
         </p>
     </div>
 
-    <!-- 8. Data Retention and Deletion -->
     <div class="section" id="retention">
-        <h2>8. Data Retention and Deletion</h2>
+        <h2>9. Data Retention and Deletion</h2>
         <ul>
             <li>
-                All user data (favorites, playback history) is stored
-                <strong>locally</strong> on your device.
+                Local app data, such as favorites and playback history, is stored on your device
+                and can be deleted by clearing app data or uninstalling the app.
             </li>
             <li>
-                <strong>Firebase Analytics</strong> data is retained for
-                <strong>14 months</strong> per Google's default retention policy, after which
-                it is automatically deleted.
+                <strong>Firebase Analytics</strong> data is retained according to Google's
+                analytics retention settings and policies.
             </li>
             <li>
-                <strong>Firebase Crashlytics</strong> crash logs are retained for
-                <strong>90 days</strong>.
+                <strong>Firebase Crashlytics</strong> crash logs are retained according to
+                Firebase Crashlytics retention policies.
+            </li>
+            <li>
+                <strong>Meta App Events</strong> data is processed and retained by Meta according
+                to Meta's own data retention and privacy practices.
             </li>
             <li>No account registration is required.</li>
             <li>
-                You can delete all local data by clearing app data or uninstalling the app.
+                You may contact us at <a href="mailto:chuguoqing1001@gmail.com">chuguoqing1001@gmail.com</a>
+                to request deletion of data associated with your use of the app where reasonably
+                possible.
             </li>
         </ul>
     </div>
 
-    <!-- 9. Children's Privacy -->
     <div class="section" id="children">
-        <h2>9. Children's Privacy</h2>
+        <h2>10. Children's Privacy</h2>
         <p>
             This app is <strong>not</strong> intended for children under 13 (or under 16 in the
             EEA). We do not knowingly collect personal data from children. If you believe a child
-            has provided us with personal information, please contact us so we can promptly
-            delete it.
+            has provided us with personal information, please contact us so we can promptly delete it.
         </p>
     </div>
 
-    <!-- 10. Data Security -->
     <div class="section" id="security">
-        <h2>10. Data Security</h2>
+        <h2>11. Data Security</h2>
         <p>
             We take reasonable measures to protect your information, including using HTTPS for
             network communications where supported. However, no method of electronic transmission
@@ -581,27 +632,21 @@
         </p>
     </div>
 
-    <!-- 11. Your Rights -->
     <div class="section" id="rights">
-        <h2>11. Your Rights</h2>
+        <h2>12. Your Rights</h2>
         <p>Depending on your location, you may have the following rights:</p>
         <ul>
-            <li>
-                <strong>Access</strong>: request a copy of the data we hold about you
-            </li>
-            <li>
-                <strong>Deletion</strong>: request deletion of your data
-            </li>
+            <li><strong>Access</strong>: request a copy of the data we hold about you</li>
+            <li><strong>Deletion</strong>: request deletion of your data</li>
             <li>
                 <strong>Opt-out of personalized ads</strong>: via your device settings
-                (Settings → Google → Ads) or through the in-app consent dialog
+                (Settings - Google - Ads), by resetting your Advertising ID, or through the
+                in-app consent dialog where available
             </li>
+            <li><strong>Withdraw consent</strong>: change your ad preferences where available</li>
             <li>
-                <strong>Withdraw consent</strong>: change your ad preferences at any time
-            </li>
-            <li>
-                <strong>Data portability</strong>: your favorites are stored locally and can
-                be accessed directly on your device
+                <strong>Data portability</strong>: local favorites and playback history are stored
+                on your device and can be managed by clearing app data
             </li>
             <li>
                 <strong>Lodge a complaint</strong>: with your local data protection authority
@@ -611,9 +656,8 @@
         <p>To exercise any of these rights, contact us at the email below.</p>
     </div>
 
-    <!-- 12. Changes -->
     <div class="section" id="changes">
-        <h2>12. Changes to This Policy</h2>
+        <h2>13. Changes to This Policy</h2>
         <p>
             We may update this Privacy Policy from time to time. Any changes will be posted on
             this page with an updated "Last updated" date. Continued use of the app after changes
@@ -621,10 +665,9 @@
         </p>
     </div>
 
-    <!-- 13. Contact -->
     <div class="section" id="contact">
         <div class="contact-card">
-            <h2>13. Contact Us</h2>
+            <h2>14. Contact Us</h2>
             <p>
                 If you have any questions about this Privacy Policy, please contact us:
             </p>
@@ -636,10 +679,9 @@
 
 </main>
 
-<!-- ── Footer ──────────────────────────────────────────────────────────── -->
 <footer class="footer">
     <p>© 2026 Guoqing Chu. All rights reserved.</p>
-    <p>RadioPlayer – Internet Radio Streaming App</p>
+    <p>RadioPlayer - Internet Radio Streaming App</p>
 </footer>
 
 </body>
